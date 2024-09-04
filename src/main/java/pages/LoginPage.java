@@ -22,6 +22,9 @@ public class LoginPage {
 
     @FindBy(xpath= "//button[normalize-space()='Login']")
     WebElement loginButton;
+    @FindBy(xpath = "//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")
+    WebElement invalidCredentialErrorMessage;
+
 
 
     public void enterUserName(String userName){
@@ -35,5 +38,13 @@ public class LoginPage {
     public void clickOnLoginButton(){
         loginButton.click();
     }
+    public boolean checkIfLoginPageVisible(){
+        return userNameTextBox.isDisplayed();
+    }
+    public boolean checkIfInvalidCredentialsErrorDisplay(){
+        return invalidCredentialErrorMessage.isDisplayed();
+
+    }
+
 
 }

@@ -3,16 +3,14 @@
 <suite name="Validate Test case Execution for HRM portal">
     <test name="Sanity check" thread-count="1" parallel="false">
 <!--        -->
-        <groups>
+        <!--<groups>
             <run>
                 <include name="regression" />
                 <include name="sanity" />
             </run>
-        </groups>
+        </groups> -->
         <classes>
-            <class name="test.AdminTest"/>
-            <class name="test.AdminTest2"/>
-            <class name="test.AdminTest3"/>
+            <class name="setup.TestRunner"></class>
         </classes>
 
     </test>
